@@ -1,7 +1,9 @@
-from main import main
+#!/usr/bin/env python3
 
-import timeit
+import main
+from timeit import timeit
 
 trials = 10000
-t = timeit.timeit("main()", globals=globals(), number=trials)
-print(f"It took {t} seconds for {trials} attempts.")
+if "main" in dir(main):
+    t = timeit("main.main()", globals=globals(), number=trials)
+    print(f"It took {t} seconds for {trials} attempts.")
