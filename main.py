@@ -2,7 +2,7 @@
 
 
 def main():
-    return "main"
+    pass
 
 
 if __name__ == "__main__":
