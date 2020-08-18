@@ -13,4 +13,5 @@ lint:
 clean:
 	rm -rf __pycache__
 	rm -f .coverage*
+	rm -f coverage.xml
 	rm -rf .pytest_cache/
