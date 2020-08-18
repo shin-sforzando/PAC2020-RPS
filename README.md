@@ -1,5 +1,7 @@
 # PAC2020-RPS
 
+![Python application](https://github.com/shin-sforzando/PAC2020-RPS/workflows/Python%20application/badge.svg)
+
 Python Ability Check 2020: Rock-paper-scissors
 
 - [Requirements](#requirements)
