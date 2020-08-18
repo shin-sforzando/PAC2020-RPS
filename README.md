@@ -7,6 +7,7 @@ Python Ability Check 2020: Rock-paper-scissors
   - [Create Virtual Environment](#create-virtual-environment)
   - [Install Dependencies](#install-dependencies)
   - [Run](#run)
+  - [Lint](#lint)
   - [Test](#test)
 - [References](#references)
 - [Miscellaneous](#miscellaneous)
@@ -14,6 +15,11 @@ Python Ability Check 2020: Rock-paper-scissors
 ## Requirements
 
 - Python 3.8.5 or higher
+  - pytest
+  - pytest-cov
+  - flake8
+    - hacking
+  - tqdm
 
 ## How to Run
 
@@ -36,9 +42,17 @@ pip install -r requirements.txt
 python main.py
 ```
 
+### Lint
+
+```shell
+flake8 . --config .flake8
+```
+
 ### Test
 
-(T. B. D.)
+```shell
+pytest -vv --durations=0 --cov . --cov-config .coveragerc --cov-report term-missing
+```
 
 ## References
 

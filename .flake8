@@ -5,7 +5,7 @@ exclude =
     .git,
     __pycache__,
     venv
-max-complexity = 10
-max-line-length = 79
+max-complexity = 15
+max-line-length = 119
 show-source = True
 statistics = True
