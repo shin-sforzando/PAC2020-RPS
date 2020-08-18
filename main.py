@@ -27,5 +27,5 @@ if __name__ == "__main__":
     first_player_name = choice(players)
     second_player_name = choice(players)
     print(f"{first_player_name} vs {second_player_name}")
-    for _ in range(16):
+    for _ in range(1):
         main(first_player_name, second_player_name, 10000)
