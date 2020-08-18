@@ -1,4 +1,5 @@
-from typing import Dict, TypeVar
+from typing import Dict
+from typing import TypeVar
 
 from consequence import Consequence
 from hand import Hand
