@@ -5,6 +5,7 @@ from consequence import Consequence
 from hand import Hand
 from player import Player
 from players.doraemon import Doraemon
+from players.dorami import Dorami
 from players.nobita import Nobita
 from players.shizuka import Shizuka
 from players.suneo import Suneo
@@ -14,7 +15,8 @@ player_dictionary: Dict[str, TypePlayer] = {
     "源静香": Shizuka,
     "ドラえもん": Doraemon,
     "骨川スネ夫": Suneo,
-    "野比のび太": Nobita
+    "野比のび太": Nobita,
+    "ドラミ": Dorami,
 }
 
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from hand import Hand
 from players.suneo import Suneo
 
@@ -9,4 +11,4 @@ def test_hands(trials: int = 1000):
 
 
 if __name__ == "__main__":
-    test_hands(trials=100)
+    test_hands(trials=1000)
