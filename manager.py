@@ -1,5 +1,7 @@
 from typing import Dict, TypeVar
 
+from hand import Hand
+from consequence import Consequence
 from player import Player
 from shizuka import Shizuka
 
@@ -8,14 +10,35 @@ player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka}
 
 
 class Manager:
-    def __init__(self):
-        self.first_player = ""
-        self.second_player = ""
-
-    def assign(self, first_player: str, second_player: str):
-        self.first_player: Player = player_dictionary[first_player](is_first=True)
-        self.second_player: Player = player_dictionary[second_player](is_first=False)
+    def __init__(self, first_player: str, second_player: str):
+        self.first_player: TypePlayer = player_dictionary[first_player](is_first=True)
+        self.second_player: TypePlayer = player_dictionary[second_player](is_first=False)
+        self.history = []
 
     def game(self):
-        print(self.first_player.next_hand())
-        print(self.second_player.next_hand())
+        first_hand = self.first_player.next_hand()
+        second_hand = self.second_player.next_hand()
+        consequence = self.judge(first_hand=first_hand, second_hand=second_hand)
+        result = (first_hand.value, second_hand.value, consequence.value)
+        self.history.append(result)
+        return first_hand, second_hand, consequence
+
+    @staticmethod
+    def judge(first_hand: Hand, second_hand: Hand):
+        if first_hand is second_hand:
+            return Consequence.Draw
+        if first_hand is Hand.G:
+            if second_hand is Hand.C:
+                return Consequence.Win
+            if second_hand is Hand.P:
+                return Consequence.Lose
+        if first_hand is Hand.C:
+            if second_hand is Hand.P:
+                return Consequence.Win
+            if second_hand is Hand.G:
+                return Consequence.Lose
+        if first_hand is Hand.P:
+            if second_hand is Hand.G:
+                return Consequence.Win
+            if second_hand is Hand.C:
+                return Consequence.Lose
