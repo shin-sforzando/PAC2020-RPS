@@ -1,6 +1,6 @@
+import random
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
-import random
 
 from hand import Hand
 

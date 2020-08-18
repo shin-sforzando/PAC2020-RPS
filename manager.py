@@ -1,7 +1,7 @@
 from typing import Dict, TypeVar
 
-from hand import Hand
 from consequence import Consequence
+from hand import Hand
 from player import Player
 from shizuka import Shizuka
 
