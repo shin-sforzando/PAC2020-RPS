@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from random import choice
+
 from tqdm import tqdm
 
 from manager import Manager
@@ -21,4 +23,8 @@ def main(first: str, second: str, trials: int = 100):
 
 
 if __name__ == "__main__":
-    main("野比のび太", "ドラえもん", 1000)
+    players = list(player_dictionary.keys())
+    first_player_name = choice(players)
+    second_player_name = choice(players)
+    print(f"{first_player_name} vs {second_player_name}")
+    main(first_player_name, second_player_name, 1000)
