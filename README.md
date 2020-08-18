@@ -18,7 +18,7 @@ Python Ability Check 2020: Rock-paper-scissors
 
 - Python 3.8.5 or higher
   - pytest
-  - pytest-cov
+    - pytest-cov
   - flake8
     - hacking
   - tqdm

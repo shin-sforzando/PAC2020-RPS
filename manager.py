@@ -2,12 +2,13 @@ from typing import Dict
 from typing import TypeVar
 
 from consequence import Consequence
+from doraemon import Doraemon
 from hand import Hand
 from player import Player
 from shizuka import Shizuka
 
 TypePlayer = TypeVar("TypePlayer", bound=Player)
-player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka}
+player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon}
 
 
 class Manager:
