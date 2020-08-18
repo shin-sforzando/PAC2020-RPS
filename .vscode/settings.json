@@ -2,6 +2,9 @@
     "python.linting.enabled": true,
     "python.pythonPath": "venv/bin/python3",
     "cSpell.words": [
-        "timeit"
+        "coveragerc",
+        "pytest",
+        "timeit",
+        "tqdm"
     ]
 }
