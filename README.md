@@ -18,11 +18,11 @@ Python Ability Check 2020: Rock-paper-scissors
 ## Requirements
 
 - Python 3.8.5 or higher
-  - pytest
-    - pytest-cov
-  - flake8
-    - hacking
-  - tqdm
+  - [pytest](https://docs.pytest.org/en/stable/)
+    - [pytest-cov](https://pypi.org/project/pytest-cov/)
+  - [flake8](https://pypi.org/project/flake8/)
+    - [hacking](https://github.com/openstack/hacking)
+  - [tqdm](https://github.com/tqdm/tqdm)
 
 ## How to Run
 
