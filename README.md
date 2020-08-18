@@ -70,4 +70,4 @@ make clean
 
 ## Miscellaneous
 
-(T. B. D.)
+- [Python Ability Check 2020 - HackMD](https://hackmd.io/@sfz/BkoJEGOGD)
