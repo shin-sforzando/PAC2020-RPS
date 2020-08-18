@@ -10,7 +10,12 @@ from shizuka import Shizuka
 from suneo import Suneo
 
 TypePlayer = TypeVar("TypePlayer", bound=Player)
-player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon, "骨川スネ夫": Suneo, "野比のび太": Nobita}
+player_dictionary: Dict[str, TypePlayer] = {
+    "源静香": Shizuka,
+    "ドラえもん": Doraemon,
+    "骨川スネ夫": Suneo,
+    "野比のび太": Nobita
+}
 
 
 class Manager:

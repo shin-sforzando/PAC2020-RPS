@@ -1,6 +1,7 @@
 # PAC2020-RPS
 
 ![Python application](https://github.com/shin-sforzando/PAC2020-RPS/workflows/Python%20application/badge.svg)
+[![codecov](https://codecov.io/gh/shin-sforzando/PAC2020-RPS/branch/master/graph/badge.svg)](https://codecov.io/gh/shin-sforzando/PAC2020-RPS)
 
 Python Ability Check 2020: Rock-paper-scissors
 

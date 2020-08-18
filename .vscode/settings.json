@@ -2,9 +2,16 @@
     "python.linting.enabled": true,
     "python.pythonPath": "venv/bin/python3",
     "cSpell.words": [
-        "coveragerc",
-        "pytest",
-        "timeit",
-        "tqdm"
+      "Doraemon",
+      "codec",
+      "codecov",
+      "coveragerc",
+      "itertools",
+      "nobita",
+      "pytest",
+      "shizuka",
+      "suneo",
+      "timeit",
+      "tqdm"
     ]
 }
