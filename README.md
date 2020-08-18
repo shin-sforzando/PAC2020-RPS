@@ -58,7 +58,7 @@ pytest -vv --durations=0 --cov . --cov-config .coveragerc --cov-report term-miss
 
 ## References
 
-(T. B. D.)
+- [Strategy パターン - Wikipedia](https://ja.wikipedia.org/wiki/Strategy_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3)
 
 ## Miscellaneous
 
