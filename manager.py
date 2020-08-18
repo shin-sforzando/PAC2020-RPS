@@ -19,9 +19,16 @@ class Manager:
         first_hand = self.first_player.next_hand()
         second_hand = self.second_player.next_hand()
         consequence = self.judge(first_hand=first_hand, second_hand=second_hand)
-        result = (first_hand.value, second_hand.value, consequence.value)
+        result = (first_hand, second_hand, consequence)
         self.history.append(result)
         return first_hand, second_hand, consequence
+
+    def get_converted_history(self):
+        return [(h[0].value, h[1].value, h[2].value) for h in self.history]
+
+    def get_result(self):
+        wins = [h for h in self.history if h[-1] == Consequence.Win]
+        return len(wins) / len(self.history)
 
     @staticmethod
     def judge(first_hand: Hand, second_hand: Hand):
