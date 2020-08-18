@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
 
-import main
 from timeit import timeit
 
-trials = 10000
-if "main" in dir(main):
-    t = timeit("main.main()", globals=globals(), number=trials)
-    print(f"It took {t} seconds for {trials} attempts.")
+import pytest
+
+import main
+
+
+@pytest.mark.skip()
+def measure_time(stmt: str, trials: int = 10000) -> float:
+    t = timeit(stmt, globals=globals(), number=trials)
+    print(f"{stmt} took {t} seconds for {trials} attempts.")
+    return t
+
+
+def test_main():
+    dir(main)
+    assert 1 != 2

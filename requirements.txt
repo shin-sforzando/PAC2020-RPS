@@ -1,4 +1,5 @@
 flake8
+hacking
 pytest
 pytest-cov
 tqdm
