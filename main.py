@@ -4,8 +4,8 @@ from random import choice
 
 from tqdm import tqdm
 
-from manager import Manager
-from manager import player_dictionary
+from judge import Judge
+from judge import player_dictionary
 
 players = list(player_dictionary.keys())
 
@@ -17,7 +17,7 @@ def main(first: str, second: str, trials: int = 100):
     if first not in players or second not in players:
         raise ValueError("A player who isn't registered.")
 
-    manager = Manager(first, second)
+    manager = Judge(first, second)
     for _ in tqdm(range(trials)):
         manager.game()
     print(f"{manager.get_converted_history()} {manager.get_result() * 100: .2f} %")

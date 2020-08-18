@@ -2,12 +2,12 @@ from typing import Dict
 from typing import TypeVar
 
 from consequence import Consequence
-from doraemon import Doraemon
 from hand import Hand
-from nobita import Nobita
 from player import Player
-from shizuka import Shizuka
-from suneo import Suneo
+from players.doraemon import Doraemon
+from players.nobita import Nobita
+from players.shizuka import Shizuka
+from players.suneo import Suneo
 
 TypePlayer = TypeVar("TypePlayer", bound=Player)
 player_dictionary: Dict[str, TypePlayer] = {
@@ -18,7 +18,7 @@ player_dictionary: Dict[str, TypePlayer] = {
 }
 
 
-class Manager:
+class Judge:
     def __init__(self, first_player: str, second_player: str):
         self.first_player: TypePlayer = player_dictionary[first_player](is_first=True)
         self.second_player: TypePlayer = player_dictionary[second_player](is_first=False)

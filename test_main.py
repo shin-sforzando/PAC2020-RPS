@@ -6,8 +6,8 @@ from timeit import timeit
 import pytest
 from tqdm import tqdm
 
+from judge import player_dictionary
 from main import main
-from manager import player_dictionary
 
 
 @pytest.mark.skip()
@@ -21,7 +21,7 @@ def test_main():
     assert dir(main)
     matches = list(product(player_dictionary, repeat=2))
     for first, second in tqdm(matches):
-        assert measure_time(f"main('{first}', '{second}', 1000)", 16) < 1.0
+        assert measure_time(f"main('{first}', '{second}', 1000)", 16) < 3.0
 
 
 if __name__ == "__main__":
