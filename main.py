@@ -7,12 +7,13 @@ from tqdm import tqdm
 from manager import Manager
 from manager import player_dictionary
 
+players = list(player_dictionary.keys())
+
 
 def main(first: str, second: str, trials: int = 100):
     if 10000 < trials:
         raise ValueError("The number of attempts is too many.")
 
-    players = player_dictionary.keys()
     if first not in players or second not in players:
         raise ValueError("A player who isn't registered.")
 
@@ -23,7 +24,6 @@ def main(first: str, second: str, trials: int = 100):
 
 
 if __name__ == "__main__":
-    players = list(player_dictionary.keys())
     first_player_name = choice(players)
     second_player_name = choice(players)
     print(f"{first_player_name} vs {second_player_name}")
