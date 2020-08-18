@@ -4,12 +4,13 @@ from typing import TypeVar
 from consequence import Consequence
 from doraemon import Doraemon
 from hand import Hand
+from nobita import Nobita
 from player import Player
 from shizuka import Shizuka
 from suneo import Suneo
 
 TypePlayer = TypeVar("TypePlayer", bound=Player)
-player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon, "骨川スネ夫": Suneo}
+player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon, "骨川スネ夫": Suneo, "野比のび太": Nobita}
 
 
 class Manager:
@@ -24,6 +25,14 @@ class Manager:
         consequence = self.judge(first_hand=first_hand, second_hand=second_hand)
         result = (first_hand, second_hand, consequence)
         self.history.append(result)
+
+        if consequence is consequence.Win:
+            self.first_player.is_won = True
+            self.second_player.is_won = False
+        if consequence is consequence.Lose:
+            self.first_player.is_won = False
+            self.second_player.is_won = True
+
         return first_hand, second_hand, consequence
 
     def get_converted_history(self):

@@ -9,6 +9,7 @@ from hand import Hand
 @dataclass
 class Player(metaclass=ABCMeta):
     is_first: bool
+    is_won: bool = False
 
     @abstractmethod
     def next_hand(self):

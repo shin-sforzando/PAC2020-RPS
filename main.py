@@ -21,4 +21,4 @@ def main(first: str, second: str, trials: int = 100):
 
 
 if __name__ == "__main__":
-    main("ドラえもん", "ドラえもん", 1000)
+    main("野比のび太", "ドラえもん", 1000)
