@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
+from itertools import product
 from timeit import timeit
 
 import pytest
+from tqdm import tqdm
 
 from main import main
+from manager import player_dictionary
 
 
 @pytest.mark.skip()
@@ -16,7 +19,10 @@ def measure_time(stmt: str, trials: int = 100) -> float:
 
 def test_main():
     assert dir(main)
-    assert measure_time("main('源静香', '源静香', 1000)", 16) < 1.0
-    assert measure_time("main('源静香', 'ドラえもん', 1000)", 16) < 1.0
-    assert measure_time("main('ドラえもん', '源静香', 1000)", 16) < 1.0
-    assert measure_time("main('ドラえもん', 'ドラえもん', 1000)", 16) < 1.0
+    matches = list(product(player_dictionary, repeat=2))
+    for first, second in tqdm(matches):
+        assert measure_time(f"main('{first}', '{second}', 1000)", 16) < 1.0
+
+
+if __name__ == "__main__":
+    test_main()

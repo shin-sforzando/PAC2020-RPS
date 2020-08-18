@@ -6,9 +6,10 @@ from doraemon import Doraemon
 from hand import Hand
 from player import Player
 from shizuka import Shizuka
+from suneo import Suneo
 
 TypePlayer = TypeVar("TypePlayer", bound=Player)
-player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon}
+player_dictionary: Dict[str, TypePlayer] = {"源静香": Shizuka, "ドラえもん": Doraemon, "骨川スネ夫": Suneo}
 
 
 class Manager:

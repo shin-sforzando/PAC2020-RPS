@@ -3,9 +3,17 @@
 from tqdm import tqdm
 
 from manager import Manager
+from manager import player_dictionary
 
 
 def main(first: str, second: str, trials: int = 100):
+    if 10000 < trials:
+        raise ValueError("The number of attempts is too many.")
+
+    players = player_dictionary.keys()
+    if first not in players or second not in players:
+        raise ValueError("A player who isn't registered.")
+
     manager = Manager(first, second)
     for _ in tqdm(range(trials)):
         manager.game()
@@ -13,4 +21,4 @@ def main(first: str, second: str, trials: int = 100):
 
 
 if __name__ == "__main__":
-    main("ドラえもん", "源静香", 1000)
+    main("ドラえもん", "ドラえもん", 1000)

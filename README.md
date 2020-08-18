@@ -11,6 +11,7 @@ Python Ability Check 2020: Rock-paper-scissors
   - [Run](#run)
   - [Lint](#lint)
   - [Test](#test)
+  - [Clean](#clean)
 - [References](#references)
 - [Miscellaneous](#miscellaneous)
 
@@ -35,7 +36,7 @@ source venv/bin/activate
 ### Install Dependencies
 
 ```shell
-pip install -r requirements.txt
+make upgrade
 ```
 
 ### Run
@@ -47,13 +48,19 @@ python main.py
 ### Lint
 
 ```shell
-flake8 . --config .flake8
+make lint
 ```
 
 ### Test
 
 ```shell
-pytest -vv --durations=0 --cov . --cov-config .coveragerc --cov-report term-missing
+make test
+```
+
+### Clean
+
+```shell
+make clean
 ```
 
 ## References
