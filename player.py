@@ -1,7 +1,7 @@
-import random
 from abc import ABCMeta
 from abc import abstractmethod
 from dataclasses import dataclass
+from random import choice
 
 from hand import Hand
 
@@ -13,4 +13,4 @@ class Player(metaclass=ABCMeta):
     @abstractmethod
     def next_hand(self):
         hands = [x for x in Hand]
-        return random.choice(hands)
+        return choice(hands)
